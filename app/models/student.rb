@@ -1,6 +1,6 @@
 class Student < ActiveRecord::Base
   after_initialize :init
-  def :init
+  def init
     self.active = false if self.active.nil?
   end
   def to_s
